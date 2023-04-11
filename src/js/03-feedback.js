@@ -5,7 +5,7 @@ const LOCALSTORAGE_KEY = "feedback-form-state";
 const formField = document.querySelector(".feedback-form");
 // console.log(formField);
 const input = document.querySelector("input");
-const textArea = document.querySelector("textarea")
+const textArea = document.querySelector("textarea"):
 const email = formField.addEventListener("input", throttle(emailInput,500));
 const message = formField.addEventListener("input", throttle(messageInput,500));
 const submit = formField.addEventListener("submit", onSubmit);
