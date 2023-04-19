@@ -9,7 +9,7 @@ const textArea = document.querySelector("textarea");
 const email = formField.addEventListener("input", throttle(onInput,500));
 const submit = formField.addEventListener("submit", onSubmit);
 
-let formArr = {}
+let formArr = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) || {};
 
 if (localStorage.getItem(LOCALSTORAGE_KEY)) {
     
@@ -42,6 +42,7 @@ function onSubmit(evt) {
         console.log(formArr);
         formField.reset();
         localStorage.removeItem(LOCALSTORAGE_KEY);
+        formArr = {};
     } else {alert(" Fill in all fields. Please!")}
         
     }
